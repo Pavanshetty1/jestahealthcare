@@ -1,0 +1,135 @@
+.category-page {
+  padding: 120px 70px 80px;
+  background: #f7fbff;
+}
+
+.category-hero {
+  max-width: 760px;
+  margin-bottom: 50px;
+}
+
+.category-hero span {
+  color: #0f8c53;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.category-hero h1 {
+  font-size: 48px;
+  color: #195196;
+  margin: 14px 0;
+}
+
+.category-hero p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.category-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.category-product-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 12px 35px rgba(25, 81, 150, 0.1);
+  transition: 0.3s ease;
+}
+
+.category-product-card:hover {
+  transform: translateY(-7px);
+}
+
+.category-product-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  background: #eef6ff;
+  padding: 25px;
+}
+
+.category-product-card div {
+  padding: 24px;
+}
+
+.category-product-card h3 {
+  color: #195196;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.category-product-card p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.category-product-card span {
+  display: inline-block;
+  margin-top: 18px;
+  color: #0f8c53;
+  font-weight: 700;
+}
+
+.skeleton-card {
+  pointer-events: none;
+}
+
+.skeleton-image,
+.skeleton-title,
+.skeleton-text {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e5e5e5 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 230px;
+}
+
+.skeleton-title {
+  height: 28px;
+  margin: 20px 0 15px;
+  border-radius: 6px;
+}
+
+.skeleton-text {
+  height: 14px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.skeleton-text.short {
+  width: 60%;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .category-page {
+    padding: 100px 22px 60px;
+  }
+
+  .category-products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-hero h1 {
+    font-size: 36px;
+  }
+}

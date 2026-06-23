@@ -1,0 +1,98 @@
+.why-section {
+  padding: 100px 8%;
+  background: #f8f7fa;
+}
+
+.why-header {
+  max-width: 760px;
+  margin-bottom: 60px;
+}
+
+.why-header span {
+  /* color: #0f8c53; */
+  color: #145c99;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.why-header h2 {
+  font-family: "Astro", sans-serif;
+  margin: 18px 0 20px;
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 400;
+  color: #222;
+}
+
+.why-header p {
+  max-width: 620px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.why-card {
+  background: #fff;
+  padding: 36px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.35s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+.why-card h3 {
+  font-size: 26px;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 18px;
+}
+
+.why-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.why-line {
+  margin-top: auto;
+  width: 70px;
+  height: 4px;
+  background: #0f8c53;
+}
+
+@media (max-width: 992px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-header h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-section {
+    padding: 70px 24px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-header h2 {
+    font-size: 34px;
+  }
+}

@@ -1,0 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("./assets/fonts/KumbhSans-VariableFont_YOPQ,wght.ttf")
+    format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Astro";
+  src: url("./assets/fonts/fonnts.com-New_Astro_Soft_Regular.otf")
+    format("truetype");
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}

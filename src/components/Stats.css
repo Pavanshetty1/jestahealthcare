@@ -1,0 +1,141 @@
+.stats-section {
+  background: white;
+  padding: 75px 4%;
+}
+
+.stats-header {
+  max-width: 760px;
+  /* margin-bottom: 70px; */
+}
+
+.stats-header span {
+  display: inline-block;
+  /* color: #0f8c53; */
+  color: #145c99;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.stats-header h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 22px;
+}
+
+.stats-header p {
+  max-width: 650px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 34px;
+}
+
+.stat-card {
+  transition: 0.6s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+}
+
+.stat-card h2 {
+  font-size: 70px;
+  line-height: 1;
+  font-weight: 300;
+  color: #242424;
+  margin-bottom: 28px;
+}
+
+.stat-card p {
+  min-height: 58px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #424242;
+  margin-bottom: 34px;
+}
+
+.stat-card span {
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+@media (max-width: 992px) {
+  .stats-section {
+    padding: 65px 24px;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .stats-header h1 {
+    font-size: 38px;
+  }
+
+  .stats-header p {
+    font-size: 16px;
+  }
+
+  .stat-card h2 {
+    font-size: 56px;
+  }
+
+  .stat-card p {
+    min-height: auto;
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-section {
+    padding: 50px 18px;
+  }
+
+  .stats-header {
+    margin-bottom: 40px;
+  }
+
+  .stats-header h1 {
+    font-size: 28px;
+  }
+
+  .stats-header p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .stat-card {
+    text-align: center;
+  }
+
+  .stat-card:hover {
+    transform: none;
+  }
+
+  .stat-card h2 {
+    font-size: 46px;
+    margin-bottom: 16px;
+  }
+
+  .stat-card p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    min-height: auto;
+  }
+}

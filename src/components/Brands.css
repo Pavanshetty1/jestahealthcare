@@ -1,0 +1,167 @@
+.brands-section {
+  padding: 60px 4%;
+  background: #fff;
+}
+
+.brands-header {
+  max-width: 720px;
+  margin-bottom: 60px;
+}
+
+.brands-header span {
+  display: inline-block;
+
+  /* color: #0f8c53; */
+  color: #145c99;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  margin-bottom: 18px;
+}
+
+.brands-header h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Astro", sans-serif;
+
+  color: #222;
+
+  margin-bottom: 20px;
+}
+
+.brands-header p {
+  max-width: 650px;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  color: #666;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 28px;
+}
+
+.brand-card {
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fafafa;
+
+  transition: 0.3s;
+}
+
+.brand-card img {
+  max-width: 140px;
+  max-height: 60px;
+
+  object-fit: contain;
+
+  filter: grayscale(100%);
+  opacity: 0.5;
+
+  transition: all 0.5s ease;
+}
+
+.brand-card.active img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+@media (max-width: 992px) {
+  .brands-section {
+    padding: 55px 24px;
+  }
+
+  .brands-header {
+    margin-bottom: 40px;
+  }
+
+  .brands-header h1 {
+    font-size: 40px;
+  }
+
+  .brands-header p {
+    font-size: 16px;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .brand-card {
+    height: 130px;
+  }
+
+  .brand-card img {
+    max-width: 120px;
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-section {
+    padding: 50px 18px;
+  }
+
+  .brands-header {
+    margin-bottom: 32px;
+  }
+
+  .brands-header span {
+    font-size: 11px;
+  }
+
+  .brands-header h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+
+  .brands-header p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .brand-card {
+    height: 95px;
+  }
+
+  .brand-card img {
+    max-width: 90px;
+    max-height: 40px;
+  }
+
+  .brand-card.active img {
+    transform: scale(1.03);
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-grid {
+    gap: 12px;
+  }
+
+  .brand-card {
+    height: 85px;
+  }
+
+  .brand-card img {
+    max-width: 80px;
+    max-height: 36px;
+  }
+}
