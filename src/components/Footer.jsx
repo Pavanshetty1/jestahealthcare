@@ -16,22 +16,22 @@ function Footer() {
           <a href="/about">About Us</a>
           <a href="/careers">Careers</a>
           <a href="/contact">Contact Us</a>
-          <a href="/partners">Our Partners</a>
+          {/* <a href="/partners">Our Partners</a>  */}
         </div>
 
         <div className="footer-col">
           <h4>PRODUCTS</h4>
           <a href="/products">Medical Products</a>
           <a href="/products">Surgical Supplies</a>
-          <a href="/products">Healthcare Solutions</a>
-          <a href="/brands">Brands</a>
+          {/* <a href="/products">Healthcare Solutions</a> */}
+          <a href="/#brands">Brands</a>
         </div>
 
         <div className="footer-col">
           <h4>RESOURCES</h4>
-          <a href="/blogs">Insights</a>
-          <a href="/blogs">Healthcare Updates</a>
-          <a href="/blogs">Product Knowledge</a>
+          <a href="/#blogs">Insights</a>
+          <a href="/#blogs">Healthcare Updates</a>
+          <a href="/#blogs">Product Knowledge</a>
         </div>
 
         <div className="footer-col">

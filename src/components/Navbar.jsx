@@ -43,8 +43,8 @@ function Navbar() {
       <nav className="main-nav">
         <a href="/products">Products</a>
         {/* <a href="/solutions">Solutions</a> */}
-        <a href="#brands">Brands</a>
-        <a href="#blogs">Insights</a>
+        <a href="/#brands">Brands</a>
+        <a href="/#blogs">Insights</a>
         <a href="/about">About Us</a>
         <a href="/contact">Contact</a>
       </nav>

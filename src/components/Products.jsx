@@ -14,7 +14,7 @@ function Products() {
   }, []);
 
   return (
-    <section className="products-section">
+    <section className="products-section" id="products">
       <div className="products-header">
         <span>PRODUCTS</span>
       </div>

@@ -13,14 +13,16 @@ function ProductDetails() {
   useEffect(() => {
     async function fetchProductDetails() {
       try {
-        const productRes = await fetch(`${API_URL}/api/products/${productSlug}`);
+        const productRes = await fetch(
+          `${API_URL}/api/products/${productSlug}`,
+        );
         const productData = await productRes.json();
 
         setProduct(productData);
 
         if (productData?.category_id) {
           const relatedRes = await fetch(
-            `${API_URL}/api/products/related/${productData.category_id}/${productData.slug}`
+            `${API_URL}/api/products/related/${productData.category_id}/${productData.slug}`,
           );
           const relatedData = await relatedRes.json();
           setRelatedProducts(relatedData);
@@ -79,7 +81,7 @@ function ProductDetails() {
         </div>
 
         <div className="pd-content">
-          <span>JESTA HEALTHCARE</span>
+          {/* <span>JESTA HEALTHCARE</span> */}
           <h1>{product.title}</h1>
           <p>{product.description}</p>
 

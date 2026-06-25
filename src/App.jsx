@@ -17,11 +17,13 @@ import ScrollToTop from "./components/ScrollToTop";
 
 import ProductsByCategory from "./components/ProductsByCategory";
 import ProductDetails from "./components/ProductDetails";
+import ScrollToHash from "./components/ScrollToHash";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <ScrollToHash />
       <ScrollToTop />
 
       <Routes>
@@ -41,8 +43,12 @@ function App() {
         <Route path="/about" element={<AboutHero />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/insights/:slug" element={<InsightDetails />} />
-              <Route path="/products/:categorySlug" element={<ProductsByCategory />} />
-      <Route path="/product/:productSlug" element={<ProductDetails />} />
+        <Route
+          path="/products/:categorySlug"
+          element={<ProductsByCategory />}
+        />
+        <Route path="/product/:productSlug" element={<ProductDetails />} />
+        <Route path="/products" element={<Products />} />
       </Routes>
 
       <Blogs />

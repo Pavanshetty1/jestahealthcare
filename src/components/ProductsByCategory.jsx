@@ -14,12 +14,12 @@ function ProductsByCategory() {
     async function fetchCategoryProducts() {
       try {
         const categoryRes = await fetch(
-          `${API_URL}/api/categories/${categorySlug}`
+          `${API_URL}/api/categories/${categorySlug}`,
         );
         const categoryData = await categoryRes.json();
 
         const productsRes = await fetch(
-          `${API_URL}/api/products/category/${categorySlug}`
+          `${API_URL}/api/products/category/${categorySlug}`,
         );
         const productsData = await productsRes.json();
 
@@ -35,25 +35,25 @@ function ProductsByCategory() {
     fetchCategoryProducts();
   }, [categorySlug]);
 
-if (loading) {
-  return (
-    <section className="category-page">
-      <div className="category-products-grid">
-        {[...Array(6)].map((_, index) => (
-          <div className="category-product-card skeleton-card" key={index}>
-            <div className="skeleton-image"></div>
+  if (loading) {
+    return (
+      <section className="category-page">
+        <div className="category-products-grid">
+          {[...Array(6)].map((_, index) => (
+            <div className="category-product-card skeleton-card" key={index}>
+              <div className="skeleton-image"></div>
 
-            <div>
-              <div className="skeleton-title"></div>
-              <div className="skeleton-text"></div>
-              <div className="skeleton-text short"></div>
+              <div>
+                <div className="skeleton-title"></div>
+                <div className="skeleton-text"></div>
+                <div className="skeleton-text short"></div>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
+          ))}
+        </div>
+      </section>
+    );
+  }
 
   if (!category) {
     return <h2>Category not found</h2>;
@@ -78,7 +78,8 @@ if (loading) {
 
             <div>
               <h3>{product.title}</h3>
-              <p>{product.description}</p>
+              {/* <p>{product.description}</p> */}
+              <p>{product.description.slice(0, 120)}...</p>
               <span>View Details →</span>
             </div>
           </Link>

@@ -18,7 +18,7 @@ function InsightDetails() {
         <div className="insight-overlay"></div>
 
         <div className="insight-hero-content">
-          <span>{insight.label}</span>
+          {/* <span>{insight.label}</span> */}
           <h1>{insight.title}</h1>
           <p>{insight.desc}</p>
         </div>
