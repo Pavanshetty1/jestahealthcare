@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./AnnouncementSlider.css";
 
-import drapes from "/images/dress.webp";
-import gloves from "/images/gloves.webp";
+import drapes from "/images/equipppp.webp";
+import gloves from "/images/glovesone.webp";
 import bp from "/images/equip.webp";
 import stetho from "/images/stetho.webp";
 import stethoscope from "/images/steth.webp";
@@ -14,28 +14,28 @@ function AnnouncementSlider() {
       title: "Sterile products for everyday clinical care",
       text: "Explore surgical drapes, gauze swabs and dressing items.",
       image: drapes,
-      link: "#products",
+      link: "/products",
     },
     {
       label: "INFECTION PREVENTION",
       title: "Reliable protection for healthcare teams",
       text: "Medical gloves, sanitizers and essential safety products.",
       image: gloves,
-      link: "#products",
+      link: "/products",
     },
     {
       label: "DIAGNOSTIC SUPPORT",
       title: "Tools that support better patient monitoring",
       text: "BP machines, stethoscopes and diagnostic essentials.",
       image: bp,
-      link: "#products",
+      link: "/products",
     },
     {
       label: "TRUSTED BRANDS",
       title: "Quality healthcare products from reliable partners",
       text: "Supplying hospitals, clinics and healthcare professionals.",
       image: stethoscope,
-      link: "#brands",
+      link: "/products",
     },
   ];
 
@@ -51,7 +51,7 @@ function AnnouncementSlider() {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 4000);
+    const timer = setInterval(nextSlide, 400000);
     return () => clearInterval(timer);
   }, []);
 
@@ -61,19 +61,19 @@ function AnnouncementSlider() {
         ‹
       </button>
 
-     <a
-  href={slides[active].link}
-  className="announcement-slide"
-  key={active}
-  onTouchStart={(e) => setTouchStart(e.touches[0].clientX)}
-  onTouchEnd={(e) => {
-    const touchEnd = e.changedTouches[0].clientX;
-    const diff = touchStart - touchEnd;
+      <a
+        href={slides[active].link}
+        className="announcement-slide"
+        key={active}
+        onTouchStart={(e) => setTouchStart(e.touches[0].clientX)}
+        onTouchEnd={(e) => {
+          const touchEnd = e.changedTouches[0].clientX;
+          const diff = touchStart - touchEnd;
 
-    if (diff > 50) nextSlide();
-    if (diff < -50) prevSlide();
-  }}
->
+          if (diff > 50) nextSlide();
+          if (diff < -50) prevSlide();
+        }}
+      >
         <div className="slide-text">
           <span>{slides[active].label}</span>
           <h2>{slides[active].title}</h2>

@@ -104,6 +104,68 @@ app.get("/api/products/:slug", (req, res) => {
   });
 });
 
+app.get("/api/search", (req, res) => {
+  const q = req.query.q;
+
+  if (!q) {
+    return res.json({ products: [], categories: [] });
+  }
+
+  const searchTerm = `%${q}%`;
+
+  const productsSql = `
+    SELECT 
+      products.id,
+      products.title,
+      products.slug,
+      products.image,
+      products.description,
+      categories.name AS category_name,
+      categories.slug AS category_slug
+    FROM products
+    JOIN categories ON products.category_id = categories.id
+    WHERE products.title LIKE ?
+    ORDER BY products.id
+  `;
+
+  const categoriesSql = `
+    SELECT *
+    FROM categories
+    WHERE name LIKE ?
+    ORDER BY id
+  `;
+
+  db.all(productsSql, [searchTerm], (err, products) => {
+    if (err) {
+      return res.status(500).json({ message: "Search failed" });
+    }
+
+    db.all(categoriesSql, [searchTerm], (err, categories) => {
+      if (err) {
+        return res.status(500).json({ message: "Search failed" });
+      }
+
+      res.json({
+        products,
+        categories,
+      });
+    });
+  });
+});
+
+app.get("/api/products/:id/pack-contents", (req, res) => {
+  const { id } = req.params;
+
+  db.all(
+    "SELECT * FROM pack_contents WHERE product_id = ? ORDER BY sort_order ASC",
+    [id],
+    (err, rows) => {
+      if (err) return res.status(500).json({ error: err.message });
+      res.json(rows);
+    },
+  );
+});
+
 app.post("/api/contact", async (req, res) => {
   try {
     const { name, phone, email, requirement, message } = req.body;

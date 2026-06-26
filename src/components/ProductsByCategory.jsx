@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { API_URL } from "../config";
 import "./ProductsByCategory.css";
+import { FaEye } from "react-icons/fa";
 
 function ProductsByCategory() {
   const { categorySlug } = useParams();

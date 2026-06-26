@@ -18,6 +18,9 @@ import ScrollToTop from "./components/ScrollToTop";
 import ProductsByCategory from "./components/ProductsByCategory";
 import ProductDetails from "./components/ProductDetails";
 import ScrollToHash from "./components/ScrollToHash";
+import PrivacyPolicy from "./components/Privacy";
+import TermsConditions from "./components/Terms";
+import SearchResults from "./components/SearchResults";
 
 function App() {
   return (
@@ -49,6 +52,9 @@ function App() {
         />
         <Route path="/product/:productSlug" element={<ProductDetails />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsConditions />} />
+        <Route path="/search" element={<SearchResults />} />
       </Routes>
 
       <Blogs />

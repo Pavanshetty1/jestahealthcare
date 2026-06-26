@@ -8,6 +8,7 @@ function ProductDetails() {
 
   const [product, setProduct] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
+  const [packContents, setPackContents] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -19,6 +20,14 @@ function ProductDetails() {
         const productData = await productRes.json();
 
         setProduct(productData);
+
+        if (productData?.id) {
+          const packRes = await fetch(
+            `${API_URL}/api/products/${productData.id}/pack-contents`,
+          );
+          const packData = await packRes.json();
+          setPackContents(packData || []);
+        }
 
         if (productData?.category_id) {
           const relatedRes = await fetch(
@@ -38,35 +47,7 @@ function ProductDetails() {
   }, [productSlug]);
 
   if (loading) {
-    return (
-      <section className="pd-details">
-        <div className="pd-container">
-          <div className="pd-image pd-skeleton-image"></div>
-
-          <div className="pd-content">
-            <div className="pd-skeleton-label"></div>
-            <div className="pd-skeleton-title"></div>
-            <div className="pd-skeleton-text"></div>
-            <div className="pd-skeleton-text"></div>
-            <div className="pd-skeleton-text short"></div>
-            <div className="pd-skeleton-btn"></div>
-          </div>
-        </div>
-
-        <div className="pd-related">
-          <div className="pd-skeleton-related-title"></div>
-
-          <div className="pd-related-grid">
-            {[...Array(3)].map((_, index) => (
-              <div className="pd-related-card" key={index}>
-                <div className="pd-skeleton-related-image"></div>
-                <div className="pd-skeleton-related-text"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
+    return <section className="pd-details">Loading...</section>;
   }
 
   if (!product) {
@@ -81,15 +62,54 @@ function ProductDetails() {
         </div>
 
         <div className="pd-content">
-          {/* <span>JESTA HEALTHCARE</span> */}
           <h1>{product.title}</h1>
           <p>{product.description}</p>
+
+          {product.features && (
+            <div className="pd-features">
+              <h3>Key Features</h3>
+
+              <ul>
+                {product.features.split("|").map((feature, index) => (
+                  <li key={index}>{feature.trim()}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <Link to="/contact" className="pd-btn">
             Enquire Now →
           </Link>
         </div>
       </div>
+
+      {packContents.length > 0 && (
+        <div className="pd-pack">
+          <h2>Pack Contents</h2>
+
+          <div className="pd-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Description</th>
+                  <th>Qty</th>
+                  <th>Size</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {packContents.map((item) => (
+                  <tr key={item.id}>
+                    <td>{item.description}</td>
+                    <td>{item.qty}</td>
+                    <td>{item.size || "-"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       {relatedProducts.length > 0 && (
         <div className="pd-related">

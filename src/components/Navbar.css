@@ -104,11 +104,11 @@
 
 .search-box {
   width: 100%;
-  max-width: 760px;
-  height: 42px;
+  max-width: 781px;
+  height: 45px;
   display: flex;
   border: 1px solid #d6d6d6;
-  border-radius: 25px;
+  border-radius: 20px;
   overflow: hidden;
   background: #fff;
 }
@@ -148,7 +148,7 @@
   text-decoration: none;
   color: #222;
   font-size: 16px;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .main-nav a:hover {

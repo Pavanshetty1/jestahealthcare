@@ -64,14 +64,17 @@
 }
 
 .slide-image {
-  height: 240px;
+  height: 330px;
   overflow: hidden;
 }
 
 .slide-image img {
+  /* width: 100%;
+  height: 100%;
+  object-fit: cover; */
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .slider-arrow {
@@ -342,7 +345,7 @@
     height: 185px;
     max-width: 280px;
   }
-   .slider-arrow {
+  .slider-arrow {
     display: none;
   }
 }

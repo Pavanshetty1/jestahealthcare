@@ -16,13 +16,14 @@ import prathvi from "../assets/prathvi.webp";
 import dhatri from "../assets/DHATRI.webp";
 import romson from "../assets/romson.avif";
 import mad from "../assets/mad.webp";
+import elle from "/images/elle.PNG";
 
 function Brands() {
   const brands = [
     threeM,
     gehealth,
     onetouch,
-    prathvi,
+    elle,
     dhatri,
     venus,
     accsure,

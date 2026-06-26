@@ -87,15 +87,14 @@ function Contact() {
 
           <div className="info-box">
             <h4>ADDRESS</h4>
-
             <p>
-              1st Floor, Swathi Sankeema,
+              Jesta Healthcare India Pvt. Ltd. (JHIPL)
               <br />
-              No. 11, 27th Cross, 7th Block,
+              #27, 3rd Cross, Sakamma Garden,
               <br />
-              Jayanagar, Bengaluru,
+              Basavanagudi,
               <br />
-              Karnataka 560070, India
+              Bengaluru, Karnataka – 560004
             </p>
           </div>
 

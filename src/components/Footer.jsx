@@ -14,7 +14,7 @@ function Footer() {
         <div className="footer-col">
           <h4>OUR COMPANY</h4>
           <a href="/about">About Us</a>
-          <a href="/careers">Careers</a>
+          <a href="/#blogs">Blogs</a>
           <a href="/contact">Contact Us</a>
           {/* <a href="/partners">Our Partners</a>  */}
         </div>
@@ -68,8 +68,8 @@ function Footer() {
         <div className="footer-bottom-content">
           <p>
             <a href="/privacy">Privacy</a> |
-            <a href="/terms"> Terms & Conditions</a> |
-            <a href="/sitemap"> Site Map</a>
+            <a href="/terms"> Terms & Conditions</a> 
+            {/* <a href="/sitemap"> Site Map</a> */}
           </p>
 
           <p>© 2026 Jesta Healthcare. All Rights Reserved.</p>
