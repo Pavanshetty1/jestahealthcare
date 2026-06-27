@@ -231,8 +231,44 @@
     transform: none;
     box-shadow: none;
   }
+  .product-content h3{
+    margin-bottom: -20px;
+  }
 
   .product-card:hover .product-image img {
     transform: none;
+  }
+  .product-view1 {
+    margin-top: auto;
+
+    width: 105px;
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding-left: 8px;
+
+    background: #0f8c53;
+    color: #fff;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: all 0.35s ease;
+  }
+  .product-view1 {
+    width: 100px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .product-view-icon {
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
   }
 }

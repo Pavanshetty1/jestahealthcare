@@ -246,9 +246,22 @@
     font-size: 14px;
   }
 
-  .category-product-card span {
-    margin-top: 14px;
-    font-size: 14px;
+  .view-details-btn {
+    width: 135px;
+    height: 40px;
+    font-size: 13px;
+    margin-top: 16px;
+    border-radius: 999px;
+  }
+
+  .btn-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
+  .category-product-card .view-details-btn span {
+    margin-top: 0;
   }
 }
 

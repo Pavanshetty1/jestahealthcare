@@ -44,10 +44,10 @@ function Products() {
                 </span>
 
                 <h3>{item.name}</h3>
-<div className="product-view1">
-  <span className="product-view-icon">↗</span>
-  <span>View</span>
-</div>
+                <div className="product-view1">
+                  <span className="product-view-icon">↗</span>
+                  <span>View</span>
+                </div>
               </div>
             </Link>
           ))}

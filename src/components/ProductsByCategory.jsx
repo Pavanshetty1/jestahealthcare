@@ -83,9 +83,9 @@ function ProductsByCategory() {
               <p>{product.description.slice(0, 120)}...</p>
               {/* <span>View Details →</span> */}
               <button className="view-details-btn">
-  <span className="btn-icon">↗</span>
-  <span>View Details</span>
-</button>
+                <span className="btn-icon">↗</span>
+                <span>View Details</span>
+              </button>
             </div>
           </Link>
         ))}

@@ -382,10 +382,23 @@
     line-height: 1.7;
     margin-bottom: 28px;
   }
-
   .pd-btn {
-    padding: 13px 24px;
-    font-size: 14px;
+    width: 155px;
+    height: 42px;
+    padding-left: 8px;
+    padding-right: 0;
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .pd-btn-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
+  .pd-content span {
+    letter-spacing: 0;
   }
 
   .pd-related {

@@ -169,10 +169,14 @@ function Contact() {
               required
             ></textarea>
 
-            {status && <p className={`form-status ${statusType}`}>{status}</p>}
-            <button type="submit" disabled={loading}>
-              {loading ? "Sending..." : "Send Enquiry →"}
-            </button>
+           {status && <p className={`form-status ${statusType}`}>{status}</p>}
+
+<button type="submit" className="contact-submit-btn" disabled={loading}>
+  <span className="contact-submit-icon">↗</span>
+  <span className="contact-submit-text">
+    {loading ? "Sending..." : "Send Enquiry"}
+  </span>
+</button>
           </form>
         </section>
 
