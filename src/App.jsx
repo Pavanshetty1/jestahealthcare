@@ -21,6 +21,7 @@ import ScrollToHash from "./components/ScrollToHash";
 import PrivacyPolicy from "./components/Privacy";
 import TermsConditions from "./components/Terms";
 import SearchResults from "./components/SearchResults";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/search" element={<SearchResults />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Blogs />

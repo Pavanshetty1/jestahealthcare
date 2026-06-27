@@ -3,9 +3,9 @@ import "./AnnouncementSlider.css";
 
 import drapes from "/images/equipppp.webp";
 import gloves from "/images/glovesone.webp";
-import bp from "/images/equip.webp";
+import bp from "/images/monitor.webp";
 import stetho from "/images/stetho.webp";
-import stethoscope from "/images/steth.webp";
+import stethoscope from "/images/sliderstetho2.webp";
 
 function AnnouncementSlider() {
   const slides = [
@@ -16,13 +16,7 @@ function AnnouncementSlider() {
       image: drapes,
       link: "/products",
     },
-    {
-      label: "INFECTION PREVENTION",
-      title: "Reliable protection for healthcare teams",
-      text: "Medical gloves, sanitizers and essential safety products.",
-      image: gloves,
-      link: "/products",
-    },
+
     {
       label: "DIAGNOSTIC SUPPORT",
       title: "Tools that support better patient monitoring",
@@ -35,6 +29,13 @@ function AnnouncementSlider() {
       title: "Quality healthcare products from reliable partners",
       text: "Supplying hospitals, clinics and healthcare professionals.",
       image: stethoscope,
+      link: "/products",
+    },
+    {
+      label: "INFECTION PREVENTION",
+      title: "Reliable protection for healthcare teams",
+      text: "Medical gloves, sanitizers and essential safety products.",
+      image: gloves,
       link: "/products",
     },
   ];
@@ -51,7 +52,7 @@ function AnnouncementSlider() {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 400000);
+    const timer = setInterval(nextSlide, 4000);
     return () => clearInterval(timer);
   }, []);
 

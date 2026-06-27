@@ -1,98 +1,98 @@
-import video1 from "../assets/homevideo1.webm";
-import video2 from "../assets/blogs1.webm";
+import video1 from "../assets/drapes.webm";
+import video2 from "../assets/equip.webm";
 
 export const insights = [
   {
-    slug: "healthcare-trends",
+    slug: "surgical-drapes-infection-prevention",
     video: video1,
-    label: "Healthcare Trends",
-    title: "Advancing patient care through quality healthcare solutions",
-    desc: "Explore how reliable medical products and trusted supply support better outcomes across hospitals and clinics.",
+    label: "Surgical Drapes",
+    title: "Why surgical drapes are essential for infection prevention",
+    desc: "Learn how surgical drapes help maintain sterile operating environments and support safer procedures in hospitals and clinics.",
 
     cards: [
       {
-        title: "Reliable Supply",
-        text: "Helping healthcare teams access essential products when needed.",
+        title: "Sterile Barrier",
+        text: "Surgical drapes help create a protective barrier around the operating area.",
         image:
-          "https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=900&q=80",
+          "https://images.unsplash.com/photo-1600959907703-125ba1374a12?w=900&q=80",
       },
       {
-        title: "Better Care",
-        text: "Supporting safe and efficient clinical environments.",
+        title: "Operating Room Safety",
+        text: "Proper draping supports infection control during surgical procedures.",
+        image:
+          "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=900&q=80",
+      },
+      {
+        title: "Surgical Preparation",
+        text: "Drapes, gowns and sterile accessories help prepare a clean surgical field.",
+        image:
+          "https://images.unsplash.com/photo-1584515933487-779824d29309?w=900&q=80",
+      },
+    ],
+
+    content: [
+      "Surgical drapes play an important role in maintaining a sterile field during medical and surgical procedures.",
+      "They help reduce exposure to contaminants by covering non-operative areas and supporting a controlled operating environment.",
+      "For hospitals, clinics and surgical teams, choosing reliable drapes is essential for infection prevention, patient safety and procedural efficiency.",
+    ],
+
+    highlights: [
+      "Surgical drapes help maintain a sterile operating field.",
+      "They support infection prevention during procedures.",
+      "Quality drapes improve safety and confidence for surgical teams.",
+    ],
+
+    quote:
+      "A safe surgical environment begins with proper preparation, sterile barriers and dependable surgical supplies.",
+
+    conclusion:
+      "Surgical drapes are more than covering materials. They are essential infection-control products that support safer procedures and better healthcare outcomes.",
+  },
+
+  {
+    slug: "medical-equipment-modern-healthcare",
+    video: video2,
+    label: "Medical Equipment",
+    title: "Choosing the right medical equipment for modern healthcare",
+    desc: "Understand how reliable medical equipment supports diagnosis, monitoring and daily healthcare operations.",
+
+    cards: [
+      {
+        title: "Patient Monitoring",
+        text: "Monitors help healthcare professionals track vital signs and patient condition.",
+        image:
+          "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=900&q=80",
+      },
+      {
+        title: "Diagnostic Support",
+        text: "Reliable diagnostic equipment helps improve clinical decision-making.",
         image:
           "https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=900&q=80",
       },
       {
-        title: "Trusted Products",
-        text: "Delivering medical solutions from dependable healthcare brands.",
+        title: "Hospital Efficiency",
+        text: "The right equipment supports smoother workflows in hospitals and clinics.",
         image:
-          "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=900&q=80",
+          "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80",
       },
     ],
 
     content: [
-      "Healthcare teams depend on quality products every day to deliver safe, efficient and reliable patient care.",
-      "From surgical consumables to diagnostic tools, product availability plays an important role in supporting hospitals, clinics and professionals.",
-      "Jesta Healthcare focuses on trusted supply, responsive service and long-term partnerships that help healthcare environments work with confidence.",
+      "Medical equipment is a key part of modern healthcare, supporting diagnosis, monitoring, treatment and patient care.",
+      "From patient monitors and BP machines to stethoscopes and clinical devices, reliable equipment helps professionals work with accuracy and confidence.",
+      "Hospitals and clinics benefit from equipment that is dependable, easy to use and supported by trusted supply partners.",
     ],
 
     highlights: [
-      "Quality products improve daily clinical efficiency.",
-      "Reliable supply helps reduce delays in patient care.",
-      "Trusted healthcare partnerships support better outcomes.",
+      "Medical equipment supports better diagnosis and monitoring.",
+      "Reliable devices improve daily clinical efficiency.",
+      "Trusted supply helps healthcare teams avoid operational delays.",
     ],
 
     quote:
-      "Better healthcare begins with dependable products, timely supply and responsive service.",
+      "Better healthcare delivery depends on dependable equipment, accurate monitoring and timely product availability.",
 
     conclusion:
-      "As healthcare needs continue to grow, dependable product access and trusted distribution support remain essential for hospitals, clinics and healthcare professionals.",
-  },
-
-  {
-    slug: "product-knowledge",
-    video: video2,
-    label: "Product Knowledge",
-    title: "Supporting professionals with dependable medical supplies",
-    desc: "A closer look at how the right healthcare products help improve everyday clinical efficiency and care delivery.",
-
-    cards: [
-      {
-        title: "Clinical Essentials",
-        text: "Everyday supplies that support hospitals and clinics.",
-        image:
-          "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=900&q=80",
-      },
-      {
-        title: "Safety First",
-        text: "Protection-focused products for healthcare professionals.",
-        image:
-          "https://images.unsplash.com/photo-1583947581924-860bda6a26df?w=900&q=80",
-      },
-      {
-        title: "Patient Support",
-        text: "Products that help improve comfort and care delivery.",
-        image:
-          "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=900&q=80",
-      },
-    ],
-
-    content: [
-      "Dependable medical supplies are essential for smooth healthcare operations and consistent patient care.",
-      "Items such as gloves, dressing materials, gauze swabs, BP machines and stethoscopes support routine clinical workflows.",
-      "Choosing the right healthcare supplier helps professionals maintain quality, safety and availability across daily operations.",
-    ],
-
-    highlights: [
-      "Medical supplies support everyday healthcare routines.",
-      "Product consistency helps improve care quality.",
-      "Responsive suppliers make procurement easier.",
-    ],
-
-    quote:
-      "The right medical supplies help healthcare professionals work with safety, speed and confidence.",
-
-    conclusion:
-      "With dependable medical supplies and trusted service support, healthcare professionals can focus more on patient care and less on product availability.",
+      "Choosing the right medical equipment helps healthcare facilities improve patient care, clinical confidence and everyday operational efficiency.",
   },
 ];

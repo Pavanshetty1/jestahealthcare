@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { API_URL } from "../config";
 import "./SearchResults.css";
+import SEO from "./SEO";
 
 function SearchResults() {
   const [searchParams] = useSearchParams();
@@ -17,7 +18,7 @@ function SearchResults() {
         setLoading(true);
 
         const res = await fetch(
-          `${API_URL}/api/search?q=${encodeURIComponent(query)}`
+          `${API_URL}/api/search?q=${encodeURIComponent(query)}`,
         );
         const data = await res.json();
 
@@ -40,67 +41,76 @@ function SearchResults() {
   }
 
   return (
-    <section className="search-page">
-      <h1>Search Results</h1>
-      <p>
-        Showing results for <b>"{query}"</b>
-      </p>
+    <>
+      {" "}
+      <SEO
+        title="Search Medical Products"
+        description="Search medical products, healthcare equipment, surgical supplies and hospital products available at Jesta Healthcare."
+        canonical="/search"
+        robots="noindex, follow"
+      />
+      <section className="search-page">
+        <h1>Search Results</h1>
+        <p>
+          Showing results for <b>"{query}"</b>
+        </p>
 
-      {products.length === 0 && categories.length === 0 ? (
-        <div className="search-empty">
-          <h2>No results found</h2>
-          <p>Try searching Surgical Drapes, CSSD Products, Gloves or Gown.</p>
-          <Link to="/products">Browse Products</Link>
-        </div>
-      ) : (
-        <>
-          {products.length > 0 && (
-            <div className="search-block">
-              <h2>Products</h2>
+        {products.length === 0 && categories.length === 0 ? (
+          <div className="search-empty">
+            <h2>No results found</h2>
+            <p>Try searching Surgical Drapes, CSSD Products, Gloves or Gown.</p>
+            <Link to="/products">Browse Products</Link>
+          </div>
+        ) : (
+          <>
+            {products.length > 0 && (
+              <div className="search-block">
+                <h2>Products</h2>
 
-              <div className="search-grid">
-                {products.map((item) => (
-                  <Link
-                    to={`/product/${item.slug}`}
-                    className="search-card"
-                    key={item.id}
-                  >
-                    <img src={item.image} alt={item.title} />
-                    <div>
-                      <h3>{item.title}</h3>
-                      <span>{item.category_name}</span>
-                      <p>{item.description}</p>
-                    </div>
-                  </Link>
-                ))}
+                <div className="search-grid">
+                  {products.map((item) => (
+                    <Link
+                      to={`/product/${item.slug}`}
+                      className="search-card"
+                      key={item.id}
+                    >
+                      <img src={item.image} alt={item.title} />
+                      <div>
+                        <h3>{item.title}</h3>
+                        <span>{item.category_name}</span>
+                        <p>{item.description}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {categories.length > 0 && (
-            <div className="search-block">
-              <h2>Categories</h2>
+            {categories.length > 0 && (
+              <div className="search-block">
+                <h2>Categories</h2>
 
-              <div className="search-grid">
-                {categories.map((item) => (
-                  <Link
-                    to={`/products/${item.slug}`}
-                    className="search-card"
-                    key={item.id}
-                  >
-                    <img src={item.image} alt={item.name} />
-                    <div>
-                      <h3>{item.name}</h3>
-                      <p>{item.description}</p>
-                    </div>
-                  </Link>
-                ))}
+                <div className="search-grid">
+                  {categories.map((item) => (
+                    <Link
+                      to={`/products/${item.slug}`}
+                      className="search-card"
+                      key={item.id}
+                    >
+                      <img src={item.image} alt={item.name} />
+                      <div>
+                        <h3>{item.name}</h3>
+                        <p>{item.description}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
-        </>
-      )}
-    </section>
+            )}
+          </>
+        )}
+      </section>
+    </>
   );
 }
 

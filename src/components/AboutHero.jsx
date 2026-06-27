@@ -3,10 +3,16 @@ import aboutHero from "../assets/aboutjesta.webp";
 
 import WhoWeAre from "../components/WhoWeAre";
 import WhyChoose from "../components/WhyChoose";
+import SEO from "./SEO";
 
 function AboutHero() {
   return (
     <>
+      <SEO
+        title="About Us"
+        description="Learn about Jesta Healthcare, a trusted healthcare products supplier supporting hospitals, clinics and healthcare professionals with quality medical products."
+        canonical="/about"
+      />
       <section className="about-hero">
         <img src={aboutHero} alt="About Jesta Healthcare" />
 

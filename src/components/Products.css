@@ -87,11 +87,11 @@
 }
 
 .product-content h3 {
-  margin: 18px 0 24px;
-  font-size: 20px;
-  line-height: 1.3;
+  min-height: 72px; /* adjust as needed */
+  margin-bottom: 20px;
   font-weight: 400;
-  color: #222;
+  display: flex;
+  align-items: flex-start;
 }
 
 .product-content a {
@@ -111,7 +111,7 @@
   margin-left: 8px;
 }
 
-.product-view {
+/* .product-view {
   margin-top: auto;
   color: #145c99;
   font-size: 15px;
@@ -120,11 +120,62 @@
 
 .product-view span {
   transition: 0.3s;
-}
+} */
 
 .product-card:hover .product-view span {
   margin-left: 8px;
 }
+
+.product-view1 {
+  margin-top: 18px;
+
+  width: 105px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding-left: 8px;
+
+  background: #0f8c53;
+  color: #fff;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: all 0.35s ease;
+}
+
+.product-view-icon {
+  width: 26px;
+  height: 26px;
+
+  border-radius: 50%;
+
+  background: #fff;
+  color: #0f8c53;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+
+  transition: all 0.4s ease;
+}
+
+.product-card:hover .product-view1 {
+  background: #195196;
+}
+
+.product-card:hover .product-view-icon {
+  color: #195196;
+  transform: rotate(45deg);
+}
+
 @media (max-width: 1200px) {
   .products-grid {
     grid-template-columns: repeat(3, 1fr);

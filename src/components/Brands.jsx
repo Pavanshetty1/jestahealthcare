@@ -16,7 +16,7 @@ import prathvi from "../assets/prathvi.webp";
 import dhatri from "../assets/DHATRI.webp";
 import romson from "../assets/romson.avif";
 import mad from "../assets/mad.webp";
-import elle from "/images/elle.PNG";
+import elle from "/images/elle.webp";
 
 function Brands() {
   const brands = [

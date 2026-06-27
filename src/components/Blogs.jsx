@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import "./Blogs.css";
 import { insights } from "../data/insightsData";
+import SEO from "./SEO";
 
 function Blogs() {
   return (
+    <>
+      <SEO
+        title="Healthcare Insights"
+        description="Read healthcare insights, product knowledge, infection prevention tips, medical product awareness and hospital care articles from Jesta Healthcare."
+        canonical="/insights"
+      />
     <section className="blogs-section" id="blogs">
       <div className="blogs-header">
         <span>INSIGHTS & RESOURCES</span>
@@ -33,6 +40,7 @@ function Blogs() {
         ))}
       </div>
     </section>
+    </>
   );
 }
 

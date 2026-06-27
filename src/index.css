@@ -12,7 +12,7 @@ html {
 @font-face {
   font-family: "Astro";
   src: url("./assets/fonts/fonnts.com-New_Astro_Soft_Regular.otf")
-    format("truetype");
+    format("opentype");
 }
 body {
   font-family: "Kumbh Sans", sans-serif;

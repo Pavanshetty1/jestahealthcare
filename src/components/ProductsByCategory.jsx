@@ -81,7 +81,11 @@ function ProductsByCategory() {
               <h3>{product.title}</h3>
               {/* <p>{product.description}</p> */}
               <p>{product.description.slice(0, 120)}...</p>
-              <span>View Details →</span>
+              {/* <span>View Details →</span> */}
+              <button className="view-details-btn">
+  <span className="btn-icon">↗</span>
+  <span>View Details</span>
+</button>
             </div>
           </Link>
         ))}

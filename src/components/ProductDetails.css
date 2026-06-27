@@ -44,7 +44,7 @@
   margin-bottom: 40px;
 }
 
-.pd-btn {
+/* .pd-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -59,7 +59,7 @@
 
 .pd-btn:hover {
   background: #0f8c53;
-}
+} */
 
 .pd-related {
   margin-top: 100px;
@@ -236,6 +236,60 @@
 
 .pd-table-wrap tr:last-child td {
   border-bottom: none;
+}
+
+.pd-btn {
+  margin-top: 30px;
+  width: 170px;
+  height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+
+  padding-left: 10px;
+
+  background: #0f8c53;
+  color: #fff;
+
+  text-decoration: none;
+  border-radius: 50px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: all 0.35s ease;
+}
+
+.pd-btn-icon {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  background: #fff;
+  color: #0f8c53;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  transition: all 0.4s ease;
+}
+
+.pd-btn:hover {
+  background: #195196;
+  transform: translateY(-3px);
+}
+
+.pd-btn:hover .pd-btn-icon {
+  color: #195196;
+  transform: rotate(45deg);
+}
+
+.pd-btn:active {
+  transform: scale(0.97);
 }
 
 @media (max-width: 576px) {
