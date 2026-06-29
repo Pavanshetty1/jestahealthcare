@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { API_URL } from "../config";
 import "./ProductDetails.css";
 import SEO from "./SEO";
+import Breadcrumb from "./Breadcrumb";
 
 function ProductDetails() {
   const { productSlug } = useParams();
@@ -69,7 +70,21 @@ function ProductDetails() {
           type="product"
         />
       )}
-
+      <Breadcrumb
+        items={[
+          {
+            label: "Products",
+            link: "/products",
+          },
+          {
+            label: product.category_name,
+            link: `/products/${product.category_slug}`,
+          },
+          {
+            label: product.title,
+          },
+        ]}
+      />
       <section className="pd-details">
         <div className="pd-container">
           <div className="pd-image">

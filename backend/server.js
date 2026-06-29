@@ -90,19 +90,19 @@ app.get("/api/products/related/:categoryId/:slug", (req, res) => {
   });
 });
 
-app.get("/api/products/:slug", (req, res) => {
-  const { slug } = req.params;
+// app.get("/api/products/:slug", (req, res) => {
+//   const { slug } = req.params;
 
-  const sql = "SELECT * FROM products WHERE slug = ?";
+//   const sql = "SELECT * FROM products WHERE slug = ?";
 
-  db.get(sql, [slug], (err, row) => {
-    if (err) {
-      return res.status(500).json({ message: "Failed to fetch product" });
-    }
+//   db.get(sql, [slug], (err, row) => {
+//     if (err) {
+//       return res.status(500).json({ message: "Failed to fetch product" });
+//     }
 
-    res.json(row);
-  });
-});
+//     res.json(row);
+//   });
+// });
 
 app.get("/api/search", (req, res) => {
   const q = req.query.q;
@@ -164,6 +164,32 @@ app.get("/api/products/:id/pack-contents", (req, res) => {
       res.json(rows);
     },
   );
+});
+app.get("/api/products/:slug", (req, res) => {
+  const { slug } = req.params;
+
+  const sql = `
+    SELECT 
+      p.*,
+      c.name AS category_name,
+      c.slug AS category_slug
+    FROM products p
+    LEFT JOIN categories c
+      ON p.category_id = c.id
+    WHERE p.slug = ?
+  `;
+
+  db.get(sql, [slug], (err, product) => {
+    if (err) {
+      return res.status(500).json({ message: "Failed to fetch product" });
+    }
+
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    res.json(product);
+  });
 });
 
 app.post("/api/contact", async (req, res) => {

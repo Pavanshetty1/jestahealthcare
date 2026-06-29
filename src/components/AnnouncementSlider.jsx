@@ -52,7 +52,7 @@ function AnnouncementSlider() {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 4000);
+    const timer = setInterval(nextSlide, 400000);
     return () => clearInterval(timer);
   }, []);
 

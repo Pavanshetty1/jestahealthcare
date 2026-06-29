@@ -64,7 +64,7 @@
 }
 
 .slide-image {
-  height: 330px;
+  height: 360px;
   overflow: hidden;
 }
 
@@ -342,7 +342,7 @@
   }
 
   .slide-image {
-    height: 185px;
+    height: 213px;
     max-width: 280px;
   }
   .slider-arrow {

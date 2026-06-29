@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { API_URL } from "../config";
 import "./ProductsByCategory.css";
 import { FaEye } from "react-icons/fa";
+import Breadcrumb from "./Breadcrumb";
 
 function ProductsByCategory() {
   const { categorySlug } = useParams();
@@ -61,36 +62,50 @@ function ProductsByCategory() {
   }
 
   return (
-    <section className="category-page">
-      <div className="category-hero">
-        <span>JESTA HEALTHCARE PRODUCTS</span>
-        <h1>{category.name}</h1>
-        <p>{category.description}</p>
-      </div>
+    <>
+      {" "}
+      <Breadcrumb
+        items={[
+          {
+            label: "Products",
+            link: "/products",
+          },
+          {
+            label: category.name,
+          },
+        ]}
+      />
+      <section className="category-page">
+        <div className="category-hero">
+          <span>JESTA HEALTHCARE PRODUCTS</span>
+          <h1>{category.name}</h1>
+          <p>{category.description}</p>
+        </div>
 
-      <div className="category-products-grid">
-        {products.map((product) => (
-          <Link
-            to={`/product/${product.slug}`}
-            className="category-product-card"
-            key={product.id}
-          >
-            <img src={product.image} alt={product.title} />
+        <div className="category-products-grid">
+          {products.map((product) => (
+            <Link
+              to={`/product/${product.slug}`}
+              className="category-product-card"
+              key={product.id}
+            >
+              <img src={product.image} alt={product.title} />
 
-            <div>
-              <h3>{product.title}</h3>
-              {/* <p>{product.description}</p> */}
-              <p>{product.description.slice(0, 120)}...</p>
-              {/* <span>View Details →</span> */}
-              <button className="view-details-btn">
-                <span className="btn-icon">↗</span>
-                <span>View Details</span>
-              </button>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </section>
+              <div>
+                <h3>{product.title}</h3>
+                {/* <p>{product.description}</p> */}
+                <p>{product.description.slice(0, 120)}...</p>
+                {/* <span>View Details →</span> */}
+                <button className="view-details-btn">
+                  <span className="btn-icon">↗</span>
+                  <span>View Details</span>
+                </button>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
 
