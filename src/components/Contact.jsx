@@ -169,20 +169,24 @@ function Contact() {
               required
             ></textarea>
 
-           {status && <p className={`form-status ${statusType}`}>{status}</p>}
+            {status && <p className={`form-status ${statusType}`}>{status}</p>}
 
-<button type="submit" className="contact-submit-btn" disabled={loading}>
-  <span className="contact-submit-icon">↗</span>
-  <span className="contact-submit-text">
-    {loading ? "Sending..." : "Send Enquiry"}
-  </span>
-</button>
+            <button
+              type="submit"
+              className="contact-submit-btn"
+              disabled={loading}
+            >
+              <span className="contact-submit-icon">↗</span>
+              <span className="contact-submit-text">
+                {loading ? "Sending..." : "Send Enquiry"}
+              </span>
+            </button>
           </form>
         </section>
 
         <section className="map-section">
           <iframe
-            src="https://maps.google.com/maps?q=1st%20Floor,%20Swathi%20Sankeema,%2011,%2027th%20Cross,%207th%20Block,%20Jayanagar,%20Bengaluru,%20Karnataka%20560070&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=Jesta%20Healthcare%20India%20Pvt.%20Ltd.,%20%2327,%203rd%20Cross,%20Sakamma%20Garden,%20Basavanagudi,%20Bengaluru,%20Karnataka%20560004&t=&z=16&ie=UTF8&iwloc=B&output=embed"
             width="100%"
             height="450"
             style={{ border: 0 }}

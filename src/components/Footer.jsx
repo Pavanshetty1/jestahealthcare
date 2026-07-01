@@ -44,19 +44,22 @@ function Footer() {
         <div className="footer-col">
           <h4>FOLLOW US</h4>
           <div className="social-links">
-            <a href="/" className="linkedin">
+            <a href="https://www.google.com/" className="linkedin">
               <FaLinkedinIn />
             </a>
 
-            <a href="/" className="facebook">
+            <a href="https://www.google.com/" className="facebook">
               <FaFacebookF />
             </a>
 
-            <a href="/" className="youtube">
+            <a href="https://www.google.com/" className="youtube">
               <FaYoutube />
             </a>
 
-            <a href="/" className="instagram">
+            <a
+              href="https://www.instagram.com/jesta_healthcare/"
+              className="instagram"
+            >
               <FaInstagram />
             </a>
           </div>
@@ -68,7 +71,7 @@ function Footer() {
         <div className="footer-bottom-content">
           <p>
             <a href="/privacy">Privacy</a> |
-            <a href="/terms"> Terms & Conditions</a> 
+            <a href="/terms"> Terms & Conditions</a>
             {/* <a href="/sitemap"> Site Map</a> */}
           </p>
 
